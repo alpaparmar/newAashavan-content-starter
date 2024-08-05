@@ -19,24 +19,24 @@ export default function DefaultBaseLayout(props) {
         <div className={classNames('sb-page', pageMeta.pageCssClasses)} data-sb-object-id={pageMeta.id}>
             <div className="sb-base sb-default-base-layout">
                 <Head>
-                <title>{title}</title>
+                    <title>{title}</title>
                     {metaDescription && <meta name="description" content={metaDescription} />}
                     {metaTags.map((metaTag) => {
-                      if (metaTag.format === 'property' ) {
-                        // OpenGraph meta tags (og:*) should have the format <meta property="og:…" content="…">
-                        // Save value of OpenGraph url tag as canonical URL
-                        if (metaTag.property === 'og:url') {
-                            canonicalUrl = metaTag.content;
+                        if (metaTag.format === 'property') {
+                            // OpenGraph meta tags (og:*) should have the format <meta property="og:…" content="…">
+                            // Save value of OpenGraph url tag as canonical URL
+                            if (metaTag.property === 'og:url') {
+                                canonicalUrl = metaTag.content;
+                            }
+                            return <meta key={metaTag.property} property={metaTag.property} content={metaTag.content} />
                         }
-                        return  <meta key={metaTag.property} property={metaTag.property} content={metaTag.content} />
-                      }
-                      return  <meta key={metaTag.property} name={metaTag.property} content={metaTag.content} />
+                        return <meta key={metaTag.property} name={metaTag.property} content={metaTag.content} />
                     })}
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
                     {site.favicon && <link rel="icon" href={site.favicon} />}
                     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-                    {title !== "Page Not Found - Ashavan" && <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script>}
-                    {title !== "Page Not Found - Ashavan" && <script src="/cookie-banner.js"></script>}
+                    {/* {title !== "Page Not Found - Ashavan" && <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script>}
+                    {title !== "Page Not Found - Ashavan" && <script src="/cookie-banner.js"></script>} */}
                 </Head>
                 {site.header && <Header {...site.header} annotationPrefix={siteMeta.id} />}
                 {props.children}
