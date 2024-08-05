@@ -77,11 +77,11 @@ export default class FormBlock extends React.Component<any> {
                 id={elementId}
                 {...(!useAxios ? { method: method } : null)}
                 {...(!useAxios ? { action: action } : null)}
-                {...(useAxios ? { onSubmit: (e) => this.handleSubmit(e, action)} : null)}
                 data-netlify="true"
                 ref={this.formRef}
                 data-netlify-honeypot={formHoneypotName}
                 data-sb-field-path={annotation}
+                onSubmit={(e) => this.handleSubmit(e, action)}
             >
                 <div className={classNames('w-full', 'flex', 'flex-col', { 'sm:flex-row sm:items-end': variant === 'variant-b' })}>
                     <div
@@ -115,7 +115,7 @@ export default class FormBlock extends React.Component<any> {
                         >
                             {submitLabel}
                         </button>
-                        
+
                     </div>
                 </div>
                 <div className={classNames('mt-2')}>
