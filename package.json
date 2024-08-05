@@ -31,10 +31,11 @@
     },
     "devDependencies": {
         "@base2/pretty-print-object": "^1.0.2",
+        "@netlify/plugin-nextjs": "^5.6.0",
         "@stackbit/cms-git": "^1.0.3",
         "@stackbit/types": "^2.0.1",
-        "@types/react": "^17.0.37",
         "@types/glob": "^8.1.0",
+        "@types/react": "^17.0.37",
         "autoprefixer": "^10.4.14",
         "postcss": "^8.4.23",
         "postcss-import": "^15.1.0",
