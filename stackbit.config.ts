@@ -30,6 +30,7 @@ export const config = defineStackbitConfig({
             .filter((document) => pageModels.includes(document.modelName))
             .map((document) => {
                 let slug = (document.fields.slug as DocumentStringLikeFieldNonLocalized)?.value;
+                console.info('slufffffffffffffffffffff', slug)
                 if (!slug) return null;
                 /* Remove the leading slash in order to generate correct urlPath
                 regardless of whether the slug is '/', 'slug' or '/slug' */
