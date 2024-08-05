@@ -5,9 +5,8 @@
 /.pnp
 .pnp.js
 
-# stackbit
+# Netlify Create (formerly Stackbit)
 .sourcebit-nextjs-cache.json
-.stackbit/dynamic-components.js
 .stackbit/cache
 .cache
 
@@ -37,7 +36,10 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.envrc
 
 # IDE
 *.code-workspace
 .idea
+
+tmp*

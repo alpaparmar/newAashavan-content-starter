@@ -5,7 +5,7 @@ export function resolveStaticPaths({ pages, objects }) {
         if (!process.env.stackbitPreview && page.isDraft) {
             return paths;
         }
-        const objectType = page?.type || page?.layout;
+        const objectType = page.__metadata?.modelName;
         const pageUrlPath = page.__metadata?.urlPath;
         if (objectType && StaticPathsResolvers[objectType]) {
             const resolver = StaticPathsResolvers[objectType];
