@@ -1,6 +1,7 @@
 ---
+type: PageLayout
 title: Ashavan - Healthcare Interoperability Consulting
-layout: PageLayout
+slug: /
 sections:
   - type: HeroSection
     elementId: homepage-hero-1
@@ -120,7 +121,7 @@ sections:
     title: We can help
     subtitle: The healthcare technology industry is a jungle
     items:
-      - elementId: ''
+      - type: FeaturedItem
         title: Executive leadership
         subtitle: ''
         text: >
@@ -199,7 +200,7 @@ sections:
               - pb-4
               - pr-4
             borderRadius: xx-large
-      - elementId: ''
+      - type: FeaturedItem
         title: Integration development
         subtitle: ''
         text: >
@@ -247,7 +248,7 @@ sections:
               - pb-4
               - pr-4
             borderRadius: xx-large
-      - elementId: ''
+      - type: FeaturedItem
         title: Education & best practices
         subtitle: ''
         text: >

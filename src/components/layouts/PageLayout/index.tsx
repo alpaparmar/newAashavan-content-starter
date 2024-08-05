@@ -13,7 +13,7 @@ export default function PageLayout(props) {
         <BaseLayout page={page} site={site}>
             <main id="main" className="sb-layout sb-page-layout">
                 {page.title && (
-                    <h1 className="sr-only" data-sb-field-path="title">
+                    <h1 className="sr-only" {...{ 'data-sb-field-path': 'title' }}>
                         {page.title}
                     </h1>
                 )}

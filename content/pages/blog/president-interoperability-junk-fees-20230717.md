@@ -1,9 +1,11 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: 'Mr. President, don''t ignore interoperability''s junk fees - Nonstop Interop'
 metaDescription: null
 addTitleSuffix: true
 socialImage: null
+slug: president-interoperability-junk-fees-20230717
 metaTags:
   - type: MetaTag
     property: 'og:type'

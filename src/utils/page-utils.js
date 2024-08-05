@@ -23,6 +23,18 @@ function cssClassesFromUrlPath(urlPath) {
     });
 }
 
+function getPageUrl(page) {
+    if (!page || !page.slug) {
+        return null;
+    }
+
+    if (['PostLayout'].includes(page?.__metadata.modelName)) {
+        return `/blog${page.slug.startsWith('/') ? page.slug : `/${page.slug}`}`;
+    }
+
+    return page.slug.startsWith('/') ? page.slug : `/${page.slug}`;
+}
+
 function cssClassesFromFilePath(filePath) {
     const pathObject = path.posix.parse(filePath);
     const parts = pathObject.dir.split(path.posix.sep).filter(Boolean);
@@ -67,4 +79,5 @@ module.exports = {
     cssClassesFromFilePath,
     flattenMarkdownData,
     setEnvironmentVariables,
+    getPageUrl
 };

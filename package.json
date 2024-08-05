@@ -1,16 +1,11 @@
 {
     "version": "0.1.0",
-    "engines": {
-        "node": "^16.20.0",
-        "npm": "^8.19.4"
-    },
     "scripts": {
         "audit": "npm audit",
         "fix": "npm audit fix",
         "dev": "next dev",
-        "build": "next build && next export",
+        "build": "next build",
         "start": "next start",
-        "export": "next export",
         "validate": "stackbit validate",
         "analyze": "ANALYZE=true next build",
         "analyze:server": "BUNDLE_ANALYZE=server next build",
@@ -18,12 +13,14 @@
     },
     "dependencies": {
         "@babel/traverse": "^7.23.2",
-        "classnames": "^2.3.2",
-        "dayjs": "^1.11.7",
-        "markdown-to-jsx": "^7.2.0",
-        "next": "^12.3.4",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
+        "classnames": "^2.5.1",
+        "dayjs": "^1.11.11",
+        "front-matter": "^4.0.2",
+        "glob": "^10.4.2",
+        "markdown-to-jsx": "^7.4.7",
+        "next": "^14.2.5",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
         "sourcebit": "^0.11.1",
         "sourcebit-source-filesystem": "^0.2.0",
         "sourcebit-target-next": "^0.8.3",
@@ -31,7 +28,11 @@
         "webpack": "^5.79.0"
     },
     "devDependencies": {
+        "@base2/pretty-print-object": "^1.0.2",
+        "@stackbit/cms-git": "^1.0.3",
+        "@stackbit/types": "^2.0.1",
         "@types/react": "^17.0.37",
+        "@types/glob": "^8.1.0",
         "autoprefixer": "^10.4.14",
         "postcss": "^8.4.23",
         "postcss-import": "^15.1.0",

@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: >-
   Epic's Partners and Pals smells like favoritism, and that stinks for
@@ -6,6 +7,7 @@ metaTitle: >-
 metaDescription: null
 addTitleSuffix: true
 socialImage: null
+slug: epic-partners-pals-20230912
 metaTags:
   - type: MetaTag
     property: 'og:type'

@@ -1,8 +1,10 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: The evolution of interoperability (part 2) - Nonstop Interop
 metaDescription: null
 addTitleSuffix: true
+slug: evolution-interoperability-20230511
 metaTags:
   - type: MetaTag
     property: 'og:type'

@@ -1,10 +1,12 @@
 ---
+type: PageLayout
 metaTitle: null
 metaDescription: >-
   We take your privacy seriously. Our Privacy Policy outlines how we use cookies
   and data collected on this website.
 addTitleSuffix: true
 socialImage: null
+slug: privacy-policy
 metaTags:
   - property: 'og:title'
     content: Privacy Policy - Ashavan

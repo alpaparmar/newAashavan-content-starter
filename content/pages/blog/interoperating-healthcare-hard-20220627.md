@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: Why interoperating in healthcare is hard - Nonstop Interop
 metaDescription: >-
@@ -6,6 +7,7 @@ metaDescription: >-
   challenging
 addTitleSuffix: true
 socialImage: /images/Labyrinth-game-board-with-red-ball-1656306000.jpg
+slug: interoperating-healthcare-hard-20220627
 metaTags:
   - type: MetaTag
     property: 'og:description'

@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: It's time for HIMSS Stage 8 - Nonstop Interop
 metaDescription: >-
@@ -6,6 +7,7 @@ metaDescription: >-
   journeys and to help the most integrated ones stand above the rest.
 addTitleSuffix: true
 socialImage: /images/Boy-on-ladder-in-lake-1668405600.jpg
+slug: himss-stage-8-20221114
 metaTags:
   - type: MetaTag
     property: 'og:title'

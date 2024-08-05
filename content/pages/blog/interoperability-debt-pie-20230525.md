@@ -1,9 +1,11 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: Interoperability's tiny slice of the debt pie - Nonstop Interop
 metaDescription: null
 addTitleSuffix: true
 socialImage: null
+slug: interoperability-debt-pie-20230525
 metaTags:
   - type: MetaTag
     property: 'og:type'

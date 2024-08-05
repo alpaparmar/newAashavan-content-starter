@@ -1,10 +1,12 @@
 ---
+type: PageLayout
 metaTitle: null
 metaDescription: >-
   Learn about our unique name and company mission, discover our core qualities
   and actions, and meet our founder.
 addTitleSuffix: true
 socialImage: null
+slug: about
 metaTags:
   - property: 'og:url'
     content: 'https://ashavan.co/about'
@@ -175,4 +177,5 @@ sections:
     type: FeaturedPeopleSection
     variant: variant-d
 layout: PageLayout
+colors: colors-a
 ---

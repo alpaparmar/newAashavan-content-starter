@@ -1,6 +1,8 @@
 ---
+type: PageLayout
 metaDescription: Our customers praise our work. Hear from them about our impact.
 addTitleSuffix: true
+slug: testimonials
 metaTags:
   - property: 'og:title'
     content: Testimonials - Ashavan

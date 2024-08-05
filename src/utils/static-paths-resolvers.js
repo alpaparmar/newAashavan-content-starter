@@ -1,7 +1,10 @@
-import { getAllPosts, getAllCategoryPostsSorted, getAllAuthorPostsSorted, generatePagedPathsForPage } from './data-utils';
+import { getAllPosts, getAllCategoryPostsSorted, getAllAuthorPostsSorted, generatePagedPathsForPage, isPublished } from './data-utils';
 
 export function resolveStaticPaths({ pages, objects }) {
     return pages.reduce((paths, page) => {
+        if (!process.env.stackbitPreview && page.isDraft) {
+            return paths;
+        }
         const objectType = page?.type || page?.layout;
         const pageUrlPath = page.__metadata?.urlPath;
         if (objectType && StaticPathsResolvers[objectType]) {
@@ -14,19 +17,28 @@ export function resolveStaticPaths({ pages, objects }) {
 
 const StaticPathsResolvers = {
     PostFeedLayout: (page, objects) => {
-        const posts = getAllPosts(objects);
+        let posts = getAllPosts(objects);
+        if (!process.env.stackbitPreview) {
+            posts = posts.filter(isPublished);
+        }
         const numOfPostsPerPage = page.numOfPostsPerPage ?? 10;
         return generatePagedPathsForPage(page, posts, numOfPostsPerPage);
     },
     PostFeedCategoryLayout: (page, objects) => {
         const categoryId = page.__metadata?.id;
         const numOfPostsPerPage = page.numOfPostsPerPage ?? 10;
-        const categoryPosts = getAllCategoryPostsSorted(objects, categoryId);
+        let categoryPosts = getAllCategoryPostsSorted(objects, categoryId);
+        if (!process.env.stackbitPreview) {
+            categoryPosts = categoryPosts.filter(isPublished);
+        }
         return generatePagedPathsForPage(page, categoryPosts, numOfPostsPerPage);
     },
     Person: (page, objects) => {
         const categoryId = page.__metadata?.id;
-        const categoryPosts = getAllAuthorPostsSorted(objects, categoryId);
+        let categoryPosts = getAllAuthorPostsSorted(objects, categoryId);
+        if (!process.env.stackbitPreview) {
+            categoryPosts = categoryPosts.filter(isPublished);
+        }
         return generatePagedPathsForPage(page, categoryPosts, 10);
     }
 };

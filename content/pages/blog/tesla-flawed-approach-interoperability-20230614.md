@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: >-
   Tesla's charging deals illustrate a flawed approach to interoperability -
@@ -6,6 +7,7 @@ metaTitle: >-
 metaDescription: null
 addTitleSuffix: true
 socialImage: null
+slug: tesla-flawed-approach-interoperability-20230614
 metaTags:
   - type: MetaTag
     property: 'og:type'

@@ -1,5 +1,7 @@
 ---
+type: PageLayout
 metaTitle: null
+slug: success-stories
 metaDescription: >-
   Find out how we've made the best choice the easiest one for businesses and
   healthcare providers
@@ -134,7 +136,8 @@ sections:
         styles:
           self:
             textAlign: center
-      - elementId: digitalHealth
+      - type: FeaturedItem
+        elementId: digitalHealth
         title: Billion-dollar digital health org
         subtitle: ''
         text: >
@@ -175,7 +178,8 @@ sections:
         styles:
           self:
             textAlign: center
-      - elementId: ''
+      - type: FeaturedItem 
+        elementId: ''
         title: Sales and revenue operations consulting firm
         subtitle: ''
         text: >

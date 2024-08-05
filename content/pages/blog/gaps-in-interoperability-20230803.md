@@ -1,9 +1,11 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: The most significant gaps in interoperability - Nonstop Interop
 metaDescription: null
 addTitleSuffix: true
 socialImage: null
+slug: gaps-in-interoperability-20230803
 metaTags:
   - type: MetaTag
     property: 'og:type'

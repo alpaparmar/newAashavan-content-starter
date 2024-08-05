@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaDescription: >-
   California's Data Exchange Framework is a welcome and needed accelerator for
@@ -6,6 +7,7 @@ metaDescription: >-
   organizations in multiple directions.
 addTitleSuffix: true
 socialImage: /images/Hollywood-sign-data-exchange-1675144800.jpg
+slug: california-interoperability-consistency-key-20230131
 metaTags:
   - type: MetaTag
     property: 'og:title'

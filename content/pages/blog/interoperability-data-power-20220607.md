@@ -1,6 +1,8 @@
 ---
+type: PostLayout
 layout: PostLayout
 addTitleSuffix: true
+slug: interoperability-data-power-20220607
 metaTags:
   - type: MetaTag
     property: 'og:title'

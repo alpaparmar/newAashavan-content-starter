@@ -1,10 +1,12 @@
 ---
+type: PageLayout
 metaTitle: null
 metaDescription: >-
   We'd love to hear from you. Book a free conversation or send us a comment or
   question.
 addTitleSuffix: true
 socialImage: null
+slug: contact
 metaTags:
   - property: 'og:title'
     content: Contact Us - Ashavan

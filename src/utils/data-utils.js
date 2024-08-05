@@ -23,6 +23,10 @@ export function sortPosts(posts) {
     return posts.sort((postA, postB) => new Date(postB.date).getTime() - new Date(postA.date).getTime());
 }
 
+export function isPublished(page) {
+    return !page.isDraft;
+}
+
 export function resolveReferences(object, fieldPaths, objects, debugContext = { keyPath: [], stack: [] }) {
     const _resolveDeep = (value, fieldNames, debugContext) => {
         if (typeof value === 'string') {

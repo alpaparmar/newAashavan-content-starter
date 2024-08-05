@@ -8,6 +8,7 @@ import {
     getAllCategoryPostsSorted,
     getAllAuthorPostsSorted,
     getPagedItemsForPage,
+    isPublished,
     mapDeepAsync
 } from './data-utils';
 
@@ -46,7 +47,10 @@ const StaticPropsResolvers = {
     },
     PostFeedLayout: (props, data) => {
         const numOfPostsPerPage = props.numOfPostsPerPage ?? 10;
-        const allPosts = getAllPostsSorted(data.objects);
+        let allPosts = getAllPostsSorted(data.objects);
+        if (!process.env.stackbitPreview) {
+            allPosts = allPosts.filter(isPublished);
+        }
         const paginationData = getPagedItemsForPage(props, allPosts, numOfPostsPerPage);
         const items = resolveReferences(paginationData.items, ['author', 'category'], data.objects);
         return {
@@ -58,7 +62,10 @@ const StaticPropsResolvers = {
     PostFeedCategoryLayout: (props, data) => {
         const categoryId = props.__metadata?.id;
         const numOfPostsPerPage = props.numOfPostsPerPage ?? 10;
-        const allCategoryPosts = getAllCategoryPostsSorted(data.objects, categoryId);
+        let allCategoryPosts = getAllCategoryPostsSorted(data.objects, categoryId);
+        if (!process.env.stackbitPreview) {
+            allCategoryPosts = allCategoryPosts.filter(isPublished);
+        }
         const paginationData = getPagedItemsForPage(props, allCategoryPosts, numOfPostsPerPage);
         const items = resolveReferences(paginationData.items, ['author', 'category'], data.objects);
         return {
@@ -85,7 +92,10 @@ const StaticPropsResolvers = {
         };
     },
     RecentPostsSection: (props, data) => {
-        const allPosts = getAllPostsSorted(data.objects).slice(0, props.recentCount || 6);
+        let allPosts = getAllPostsSorted(data.objects).slice(0, props.recentCount || 6);
+        if (!process.env.stackbitPreview) {
+            allPosts = allPosts.filter(isPublished);
+        }
         const recentPosts = resolveReferences(allPosts, ['author', 'category'], data.objects);
         return {
             ...props,

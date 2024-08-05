@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: Congress whiffs again on advancing interoperability - Nonstop Interop
 metaDescription: >-
@@ -7,6 +8,7 @@ metaDescription: >-
 addTitleSuffix: true
 socialImage: /images/ID-card-1672293600.png
 elementId: postContent
+slug: congress-whiffs-advancing-interoperability-20221229
 metaTags:
   - type: MetaTag
     property: 'og:title'

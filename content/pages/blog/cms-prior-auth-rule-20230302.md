@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: 'CMS'' prior auth rule: game-changer or hot mess? - Nonstop Interop'
 metaDescription: >-
@@ -6,6 +7,7 @@ metaDescription: >-
   APIs are truly a game-changer for healthcare in the US.
 addTitleSuffix: true
 socialImage: /images/Swirling-books-1677736800.jpg
+slug: cms-prior-auth-rule-20230302
 metaTags:
   - type: MetaTag
     property: 'og:title'

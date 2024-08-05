@@ -1,4 +1,5 @@
 ---
+type: PostLayout
 layout: PostLayout
 metaTitle: What if an EHR fails? - Nonstop Interop
 metaDescription: >-
@@ -6,6 +7,7 @@ metaDescription: >-
   healthcare and interoperability from the recent banking firestorm.
 addTitleSuffix: true
 socialImage: /images/Silicon-valley-ehr-1678856400.jpg
+slug: what-if-ehr-fails-20230315
 metaTags:
   - type: MetaTag
     property: 'og:title'

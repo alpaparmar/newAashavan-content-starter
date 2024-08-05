@@ -1,6 +1,8 @@
 ---
-layout: PostFeedLayout
+type: PostFeedLayout
+title: Blog
 addTitleSuffix: true
+slug: /blog
 metaTags:
   - type: MetaTag
     property: 'og:title'
