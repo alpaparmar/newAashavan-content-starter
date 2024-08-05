@@ -28,6 +28,23 @@ export const RecentPostsSectionModel: Model = {
             name: 'recentCount',
             label: 'Number of recent posts to show',
             default: 6,
-        }
+        },
+        {
+            type: 'list',
+            name: 'actions',
+            label: 'Actions',
+            items: {
+                type: 'model',
+                models: ['Button', 'Link']
+            },
+            default: [
+                {
+                    type: 'Button',
+                    label: 'View all',
+                    url: '/',
+                    style: 'primary'
+                }
+            ]
+        },
     ]
 };
