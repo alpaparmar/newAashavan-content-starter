@@ -24,6 +24,11 @@ export const PostLayoutModel: Model = {
             name: 'settings',
             label: 'Settings',
             icon: 'gear'
+        },
+        {
+            name: 'seo',
+            label: 'SEO',
+            icon: 'page'
         }
     ],
     fields: [
@@ -213,6 +218,16 @@ export const PostLayoutModel: Model = {
             hidden: false,
             localized: false,
             group: 'settings'
+        },
+        {
+            type: 'model',
+            name: 'seo',
+            label: 'SEO',
+            required: false,
+            hidden: false,
+            localized: false,
+            models: ['Seo'],
+            group: 'seo'
         },
         // ...seoFields
     ]

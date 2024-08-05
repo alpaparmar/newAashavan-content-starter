@@ -17,6 +17,11 @@ export const PostFeedLayoutModel: Model = {
             name: 'settings',
             label: 'Settings',
             icon: 'gear'
+        },
+        {
+            name: 'seo',
+            label: 'SEO',
+            icon: 'page'
         }
     ],
     fields: [
@@ -102,6 +107,16 @@ export const PostFeedLayoutModel: Model = {
                     textAlign: 'center'
                 }
             }
+        },
+        {
+            type: 'model',
+            name: 'seo',
+            label: 'SEO',
+            required: false,
+            hidden: false,
+            localized: false,
+            models: ['Seo'],
+            group: 'seo'
         }
     ]
 };

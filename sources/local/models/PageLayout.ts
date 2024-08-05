@@ -1,5 +1,4 @@
 import { Model } from '@stackbit/types';
-import { seoFields, seoFieldGroups } from './seo-fields';
 
 export const PageLayoutModel: Model = {
     type: 'page',
@@ -19,6 +18,11 @@ export const PageLayoutModel: Model = {
             name: 'styles',
             label: 'Styles',
             icon: 'palette'
+        },
+        {
+            name: 'seo',
+            label: 'SEO',
+            icon: 'page'
         }
     ],
     fields: [
@@ -149,6 +153,16 @@ export const PageLayoutModel: Model = {
             ],
             default: 'colors-a'
         },
+        {
+            type: 'model',
+            name: 'seo',
+            label: 'SEO',
+            required: false,
+            hidden: false,
+            localized: false,
+            models: ['Seo'],
+            group: 'seo'
+        }
         // {
         //     type: 'model',
         //     name: 'backgroundImage',
