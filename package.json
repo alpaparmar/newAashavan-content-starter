@@ -28,7 +28,6 @@
     },
     "devDependencies": {
         "@base2/pretty-print-object": "^1.0.2",
-        "@netlify/plugin-nextjs": "^5.6.0",
         "@stackbit/cms-git": "^1.0.3",
         "@stackbit/types": "^2.0.1",
         "@types/glob": "^8.1.0",
@@ -38,8 +37,8 @@
         "postcss": "^8.4.23",
         "postcss-import": "^15.1.0",
         "postcss-nested": "^6.0.1",
-        "prettier": "^3.3.2",
         "sass": "^1.62.1",
+        "prettier": "^3.3.2",
         "typescript": "^5.5.2"
     },
     "description": "The Ashavan website, using Stackbit.",
