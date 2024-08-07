@@ -69,7 +69,6 @@ export default class FormBlock extends React.Component<any> {
         if (fields.length === 0) {
             return null;
         }
-        const formHoneypotName = `${elementId}-bot-field`;
         return (
             <form
                 className={classNames('sb-component', 'sb-component-block', 'sb-component-form-block', className)}
@@ -77,9 +76,7 @@ export default class FormBlock extends React.Component<any> {
                 id={elementId}
                 {...(!useAxios ? { method: method } : null)}
                 {...(!useAxios ? { action: action } : null)}
-                data-netlify="true"
                 ref={this.formRef}
-                data-netlify-honeypot={formHoneypotName}
                 data-sb-field-path={annotation}
                 onSubmit={(e) => this.handleSubmit(e, action)}
             >
