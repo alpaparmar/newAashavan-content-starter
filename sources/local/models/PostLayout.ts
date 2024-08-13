@@ -76,7 +76,19 @@ export const PostLayoutModel: Model = {
             label: 'Sections',
             items: {
                 type: 'model',
-                models: [],
+                models: [
+                    'HeroSection',
+                    'MediaGallerySection',
+                    'FeaturedItemsSection',
+                    'FeatureHighlightSection',
+                    'RecentPostsSection',
+                    'FeaturedPostsSection',
+                    'FeaturedPeopleSection',
+                    'CtaSection',
+                    'FaqSection',
+                    'TestimonialsSection',
+                    'QuoteSection'
+                ],
                 groups: ['sectionComponent']
             },
             default: [
