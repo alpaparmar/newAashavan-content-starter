@@ -37,9 +37,24 @@ export const PageLayoutModel: Model = {
             type: 'list',
             name: 'sections',
             label: 'Sections',
+            required: false,
+            hidden: false,
+            localized: false,
             items: {
                 type: 'model',
-                models: [],
+                models: [
+                    'HeroSection',
+                    'MediaGallerySection',
+                    'FeaturedItemsSection',
+                    'FeatureHighlightSection',
+                    'RecentPostsSection',
+                    'FeaturedPostsSection',
+                    'FeaturedPeopleSection',
+                    'CtaSection',
+                    'FaqSection',
+                    'TestimonialsSection',
+                    'QuoteSection'
+                ],
                 groups: ['SectionModels']
             },
             default: [

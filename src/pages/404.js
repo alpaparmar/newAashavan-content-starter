@@ -17,15 +17,10 @@ function Page(props) {
     return <PageLayout page={page} site={site} />;
 }
 
-export function getStaticPaths() {
-    const data = allContent();
-    const paths = resolveStaticPaths(data).filter((path) => path !== '/404');
-    return { paths, fallback: false };
-}
-
 export async function getStaticProps({ params }) {
+    // console.info('404 sluffffff', params.slug)
     const data = allContent();
-    const urlPath = '/' + (params.slug || []).join('/');
+    const urlPath = '/404';
     const props = await resolveStaticProps(urlPath, data);
     return { props };
 }

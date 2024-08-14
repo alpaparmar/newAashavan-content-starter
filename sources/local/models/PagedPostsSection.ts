@@ -43,11 +43,6 @@ export const PagedPostsSectionModel: Model = {
                 models: []
             },
             default: []
-        },
-        {
-            type: 'string',
-            name: 'colors',
-            default: 'colors-a'
         }
     ]
 };

@@ -11,7 +11,8 @@ export const ContactSectionModel: Model = {
     fieldGroups: [
         {
             name: 'styles',
-            label: 'Styles'
+            label: 'Styles',
+            icon: 'palette'
         },
         {
             name: 'settings',
@@ -20,8 +21,49 @@ export const ContactSectionModel: Model = {
     ],
     fields: [
         {
-            type: 'string',
+            type: 'enum',
             name: 'colors',
+            label: 'Colors',
+            description: 'The color theme of the page',
+            group: 'styles',
+            controlType: 'palette',
+            options: [
+                {
+                    label: 'Colors A',
+                    value: 'colors-a',
+                    textColor: '$onDark',
+                    backgroundColor: '$dark',
+                    borderColor: '#ececec'
+                },
+                {
+                    label: 'Colors B',
+                    value: 'colors-b',
+                    textColor: '$onLight',
+                    backgroundColor: '$light',
+                    borderColor: '#ececec'
+                },
+                {
+                    label: 'Colors C',
+                    value: 'colors-c',
+                    textColor: '$onPrimary',
+                    backgroundColor: '$primary',
+                    borderColor: '#ececec'
+                },
+                {
+                    label: 'Colors D',
+                    value: 'colors-d',
+                    textColor: '$onSecondary',
+                    backgroundColor: '$secondary',
+                    borderColor: '#ececec'
+                },
+                {
+                    label: 'Colors E',
+                    value: 'colors-e',
+                    textColor: '$onComplementary',
+                    backgroundColor: '$complementary',
+                    borderColor: '#ececec'
+                }
+            ],
             default: 'colors-h'
         },
         {
